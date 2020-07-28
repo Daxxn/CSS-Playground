@@ -1,0 +1,84 @@
+.csContainer {
+  grid-area: customSelect;
+}
+
+.csBase {
+  position: relative;
+}
+
+.csMainInput {
+  position: relative;
+  font-size: 2em;
+  padding: 0;
+  margin: 0;
+}
+
+.csOpenDD {
+  all: unset;
+  background-color: teal;
+  position: relative;
+  min-width: 100px;
+  min-height: 1rem;
+  padding: 1em 0.5em;
+}
+
+.csDropDButtonBase {
+  all: unset;
+  background-color: tomato;
+  height: 100%;
+  top: 0;
+  width: 2em;
+  min-height: 2rem;
+  /* display: inline-block; */
+  /* position: absolute; */
+}
+
+.csDropDButtonClose {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+}
+
+.csDropDButtonOpen {
+  display: inline-block;
+  position: relative;
+}
+
+.csddPos {
+  position: fixed;
+  left: 50%;
+  display: block;
+}
+
+.csDropDown {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.csDDItem {
+  all: unset;
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: var(--select-item-bg-color);
+}
+
+.csDDItem:hover {
+  background-color: var(--select-item-hover-color);
+}
+
+.csOpenAnimation {
+  animation: open 500ms infinite;
+}
+
+.csCloseAnimation {
+  animation: open 500ms reverse;
+}
+
+@keyframes open {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+}

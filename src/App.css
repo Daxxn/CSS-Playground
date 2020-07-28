@@ -1,38 +1,28 @@
+:root {
+  --menu-base-bg-color: #2f72a1;
+  --select-item-bg-color: #579ed1;
+  --select-item-hover-color: #8fd0ff;
+  --menu-base-fg-color: #ffffffe8;
+  --menu-border-color: #275b80;
+  --button-hover-color: rgba(0,0,0,0.4);
+  --radius: 4px;
+  --hamburger-menu-width: 20rem;
+  --hamburger-menu-rows: 12;
+}
+
 .App {
   text-align: center;
+  display: grid;
+  grid-template-areas: 
+    "menu menu"
+    "body body"
+    "footer footer";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bodyContainer {
+  display: grid;
+  grid-area: body;
+  grid-template:
+    "basicSelect" 1fr
+    "customSelect" 1fr / 100%;
 }

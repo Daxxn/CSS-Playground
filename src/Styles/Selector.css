@@ -1,0 +1,27 @@
+.selectorBase {
+  grid-area: basicSelect;
+  position: relative;
+}
+
+select {
+  /* width: 100%; */
+  box-shadow: 0 10px 20px rgba(1,1,1,0.2);
+  background-color: #4d5061;
+  color: #ffffffe1;
+  font-size: 1.2rem;
+  padding: 0.8em 2em 0.5em 0.5em;
+  border: 0;
+  border-radius: 4px;
+}
+
+.arrow {
+  display: block;
+  position: absolute;
+  border-radius: 0 4px 4px 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 3em;
+  background-color: #383a47;
+  pointer-events: none;
+}

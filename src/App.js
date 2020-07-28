@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Selector from './components/Selector';
+import MenuBar from './components/MenuBar';
+import CustomSelect from './components/CustomSelect';
+
+const testOptionsObj = {
+  'test1': { label: 'test 1', func: () => console.log('test 1 function!') },
+  'test2': { label: 'test 2', func: () => console.log('test 2 function!') },
+};
+
+const testOptionsStr = [
+  'test 1',
+  'test 2',
+  'more',
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MenuBar />
+      <div className="bodyContainer">
+        <Selector options={testOptionsObj}/>
+        <CustomSelect type="text" options={testOptionsStr} />
+      </div>
     </div>
   );
 }
